@@ -101,11 +101,15 @@ basic.showString("ASK A QUESTION")
 basic.showNumber(8)
 input.onGesture(Gesture.Shake, () =>  {
     basic.clearScreen()
-    let randomNumber = randint(0, 3)
-    if (randomNumber == 2) {
-        basic.showString("YES")
+    let randomNumber = randint(0, 5)
+    if (randomNumber == 4) {
+        basic.showString("Go Again")
+    } else if (randomNumber == 3) {
+        basic.showString("MAYBE")
+    } else if (randomNumber == 2) {
+        basic.showString("YEAH")
     } else if (randomNumber == 1) {
-        basic.showString("NO")
+       basic.showString("NOPE")
     } else {
         basic.showString("I DON'T KNOW")
     }
